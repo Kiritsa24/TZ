@@ -1,0 +1,48 @@
+<div class="container" [ngClass]="{ 'active': isSignUpActive }">
+    <div class="form-container sign-up">
+      <form>
+        <h1>Создать аккаунт</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name">
+        <input required type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button (click)="signUp()">Зарегистрироваться </button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+      <form>
+        <h1>Войти</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email password</span>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">      
+        <a href="#">Забыли свой пароль?</a>
+        <button (click)="signIn()">Войти</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle" (click)="toggleForm()">
+        <div class="toggle-panel toggle-left">
+          <h1>Добро пожаловать!</h1>
+          <p>Введите свои личные данные, чтобы использовать все функции сайта</p>
+          <button class="hidden" id="login">Войти</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Добро пожаловать!</h1>
+          <p>Зарегистрируйтесь, указав свои личные данные, чтобы использовать все функции сайта.</p>
+          <button class="hidden" id="register">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
+  </div>
